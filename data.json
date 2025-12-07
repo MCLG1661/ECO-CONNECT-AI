@@ -1,0 +1,118 @@
+{
+    "manufacturing": {
+        "monthly": {
+            "metrics": [
+                {"label": "Pegada de CO₂", "value": "1.2k tons", "trend": "down", "change": "-8%"},
+                {"label": "Energia Renovável", "value": "35%", "trend": "up", "change": "+5%"},
+                {"label": "Reciclagem de Resíduos", "value": "60%", "trend": "up", "change": "+10%"},
+                {"label": "Segurança no Trabalho", "value": "99.8%", "trend": "up", "change": "+0.1%"}
+            ],
+            "chartData": [1500, 1420, 1350, 1200]
+        },
+        "quarterly": {
+            "metrics": [
+                {"label": "Pegada de CO₂", "value": "3.8k tons", "trend": "down", "change": "-12%"},
+                {"label": "Energia Renovável", "value": "32%", "trend": "up", "change": "+8%"},
+                {"label": "Reciclagem de Resíduos", "value": "55%", "trend": "up", "change": "+15%"},
+                {"label": "Segurança no Trabalho", "value": "99.7%", "trend": "up", "change": "+0.3%"}
+            ],
+            "chartData": [4500, 4200, 3950, 3800]
+        },
+        "yearly": {
+            "metrics": [
+                {"label": "Pegada de CO₂", "value": "15k tons", "trend": "down", "change": "-15%"},
+                {"label": "Energia Renovável", "value": "30%", "trend": "up", "change": "+18%"},
+                {"label": "Reciclagem de Resíduos", "value": "50%", "trend": "up", "change": "+25%"},
+                {"label": "Segurança no Trabalho", "value": "99.5%", "trend": "up", "change": "+0.5%"}
+            ],
+            "chartData": [18000, 17500, 16000, 15000]
+        }
+    },
+    "retail": {
+        "monthly": {
+            "metrics": [
+                {"label": "Emissão Logística", "value": "300 tons", "trend": "down", "change": "-5%"},
+                {"label": "Uso de Sacolas Plásticas", "value": "80k", "trend": "down", "change": "-15%"},
+                {"label": "Satisfação do Cliente", "value": "92%", "trend": "up", "change": "+2%"},
+                {"label": "Diversidade na Liderança", "value": "45%", "trend": "up", "change": "+3%"}
+            ],
+            "chartData": [350, 330, 310, 300]
+        },
+        "quarterly": {
+            "metrics": [
+                {"label": "Emissão Logística", "value": "950 tons", "trend": "down", "change": "-8%"},
+                {"label": "Uso de Sacolas Plásticas", "value": "250k", "trend": "down", "change": "-20%"},
+                {"label": "Satisfação do Cliente", "value": "91%", "trend": "up", "change": "+4%"},
+                {"label": "Diversidade na Liderança", "value": "43%", "trend": "up", "change": "+5%"}
+            ],
+            "chartData": [1100, 1050, 980, 950]
+        },
+        "yearly": {
+            "metrics": [
+                {"label": "Emissão Logística", "value": "3.5k tons", "trend": "down", "change": "-12%"},
+                {"label": "Uso de Sacolas Plásticas", "value": "900k", "trend": "down", "change": "-25%"},
+                {"label": "Satisfação do Cliente", "value": "90%", "trend": "up", "change": "+8%"},
+                {"label": "Diversidade na Liderança", "value": "40%", "trend": "up", "change": "+10%"}
+            ],
+            "chartData": [4000, 3800, 3600, 3500]
+        }
+    },
+    "technology": {
+        "monthly": {
+            "metrics": [
+                {"label": "Consumo Data Center", "value": "500 MWh", "trend": "steady", "change": "0%"},
+                {"label": "Trabalho Remoto", "value": "80%", "trend": "up", "change": "+5%"},
+                {"label": "Igualdade Salarial", "value": "98%", "trend": "up", "change": "+1%"},
+                {"label": "Privacidade de Dados", "value": "100%", "trend": "steady", "change": "0%"}
+            ],
+            "chartData": [510, 505, 500, 500]
+        },
+        "quarterly": {
+            "metrics": [
+                {"label": "Consumo Data Center", "value": "1.5 GWh", "trend": "down", "change": "-2%"},
+                {"label": "Trabalho Remoto", "value": "78%", "trend": "up", "change": "+8%"},
+                {"label": "Igualdade Salarial", "value": "97%", "trend": "up", "change": "+2%"},
+                {"label": "Privacidade de Dados", "value": "100%", "trend": "steady", "change": "0%"}
+            ],
+            "chartData": [1550, 1520, 1510, 1500]
+        },
+        "yearly": {
+            "metrics": [
+                {"label": "Consumo Data Center", "value": "6 GWh", "trend": "down", "change": "-5%"},
+                {"label": "Trabalho Remoto", "value": "75%", "trend": "up", "change": "+15%"},
+                {"label": "Igualdade Salarial", "value": "95%", "trend": "up", "change": "+5%"},
+                {"label": "Privacidade de Dados", "value": "100%", "trend": "steady", "change": "0%"}
+            ],
+            "chartData": [6500, 6300, 6100, 6000]
+        }
+    },
+    "services": {
+        "monthly": {
+            "metrics": [
+                {"label": "Deslocamento (CO₂)", "value": "50 tons", "trend": "down", "change": "-10%"},
+                {"label": "Voluntariado Corporativo", "value": "200 horas", "trend": "up", "change": "+20%"},
+                {"label": "Treinamento (Horas/Func)", "value": "8h", "trend": "up", "change": "+15%"},
+                {"label": "Retenção de Talentos", "value": "95%", "trend": "up", "change": "+1%"}
+            ],
+            "chartData": [60, 55, 52, 50]
+        },
+        "quarterly": {
+            "metrics": [
+                {"label": "Deslocamento (CO₂)", "value": "140 tons", "trend": "down", "change": "-15%"},
+                {"label": "Voluntariado Corporativo", "value": "550 horas", "trend": "up", "change": "+25%"},
+                {"label": "Treinamento (Horas/Func)", "value": "22h", "trend": "up", "change": "+18%"},
+                {"label": "Retenção de Talentos", "value": "94%", "trend": "up", "change": "+2%"}
+            ],
+            "chartData": [170, 160, 150, 140]
+        },
+        "yearly": {
+            "metrics": [
+                {"label": "Deslocamento (CO₂)", "value": "500 tons", "trend": "down", "change": "-20%"},
+                {"label": "Voluntariado Corporativo", "value": "2100 horas", "trend": "up", "change": "+30%"},
+                {"label": "Treinamento (Horas/Func)", "value": "80h", "trend": "up", "change": "+22%"},
+                {"label": "Retenção de Talentos", "value": "92%", "trend": "up", "change": "+5%"}
+            ],
+            "chartData": [650, 600, 550, 500]
+        }
+    }
+}

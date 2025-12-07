@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Connect AI | Governança e Otimização Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .nav-buttons {
+            margin-left: 24px; /* Adiciona espaço à esquerda do botão de login */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <div class="logo-text-wrapper">
+                        <span class="logo-text-main">Eco Connetc Ai</span>
+                        <span class="logo-text-sub">ESG Plataform</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="#digital-twin" class="nav-link">Digital Twin</a></li>
+                    <li><a href="#compliance" class="nav-link">Compliance IA</a></li>
+                    <li><a href="#certificacao" class="nav-link">Certificação</a></li>
+                    <li><a href="#marketplace" class="nav-link">Marketplace</a></li>
+                    <li><a href="#sobre-nos" class="nav-link">Sobre</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-primary" id="loginBtn">Login/Cadastro</button>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Governança ESG e <span class="highlight">Otimização Sustentável</span></h1>
+                <p class="hero-subtitle">Plataforma B2B com IA para gerenciar, otimizar e comprovar práticas ESG de forma eficiente e transparente.</p>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <span>Inteligência Artificial</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Dados em Tempo Real</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Compliance Automatizado</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificação ESG</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" id="ctaBtn">Solicitar Demonstração</button>
+                    <button class="btn btn-outline btn-large" id="saibaMaisBtn">Saiba Mais</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="preview-title">Dashboard ESG Autônomo</div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="metric">
+                            <div class="metric-title">Pegada de CO₂</div>
+                            <div class="metric-value">-12.5%</div>
+                            <div class="metric-trend up"><i class="fas fa-arrow-up"></i></div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-title">Energia Renovável</div>
+                            <div class="metric-value">+24%</div>
+                            <div class="metric-trend up"><i class="fas fa-arrow-up"></i></div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-title">Diversidade</div>
+                            <div class="metric-value">78%</div>
+                            <div class="metric-trend steady"><i class="fas fa-minus"></i></div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-title">Conformidade</div>
+                            <div class="metric-value">100%</div>
+                            <div class="metric-trend up"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Funcionalidades -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Funcionalidades da Plataforma</h2>
+            <p class="section-subtitle">Tudo que sua empresa precisa para uma gestão ESG eficiente e transparente</p>
+        </div>
+        
+        <div class="features-container">
+            <!-- Dashboard Autônomo -->
+            <div class="feature-card" id="dashboard">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="feature-title">Dashboard ESG Autônomo</h3>
+                <p class="feature-description">
+                    Coleta dados de ERP, sensores IoT, planilhas e fornecedores. A IA padroniza, cruza e identifica falhas automaticamente.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Dados em tempo real</li>
+                    <li><i class="fas fa-check"></i> Indicadores automáticos</li>
+                    <li><i class="fas fa-check"></i> Identificação de falhas</li>
+                </ul>
+                <button class="btn btn-small btn-feature" data-feature="dashboard">Ver detalhes</button>
+            </div>
+            
+            <!-- Digital Twin -->
+            <div class="feature-card" id="digital-twin">
+                <div class="feature-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="feature-title">ESG Digital Twin</h3>
+                <p class="feature-description">
+                    Simula redução de CO₂, economia de energia, desperdício, impacto social e riscos de governança.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Simulações avançadas</li>
+                    <li><i class="fas fa-check"></i> Projeção de impactos</li>
+                    <li><i class="fas fa-check"></i> Atraente para investidores</li>
+                </ul>
+                <button class="btn btn-small btn-feature" data-feature="twin">Ver detalhes</button>
+            </div>
+            
+            <!-- Compliance IA -->
+            <div class="feature-card" id="compliance">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3 class="feature-title">IA para Prevenção de Multas</h3>
+                <p class="feature-description">
+                    Monitora leis ambientais, normas trabalhistas e exigências setoriais, alertando antes de problemas.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Monitoramento de leis</li>
+                    <li><i class="fas fa-check"></i> Alertas preventivos</li>
+                    <li><i class="fas fa-check"></i> Redução de riscos</li>
+                </ul>
+                <button class="btn btn-small btn-feature" data-feature="compliance">Ver detalhes</button>
+            </div>
+            
+            <!-- Certificação -->
+            <div class="feature-card" id="certificacao">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="feature-title">Certificação ESG Automatizada</h3>
+                <p class="feature-description">
+                    Gera relatórios auditáveis, certificados digitais, trilhas de evidência e prova antifraude via blockchain.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Blockchain para segurança</li>
+                    <li><i class="fas fa-check"></i> Relatórios auditáveis</li>
+                    <li><i class="fas fa-check"></i> Combate ao greenwashing</li>
+                </ul>
+                <button class="btn btn-small btn-feature" data-feature="certification">Ver detalhes</button>
+            </div>
+            
+            <!-- Marketplace -->
+            <div class="feature-card" id="marketplace">
+                <div class="feature-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 class="feature-title">Marketplace de Soluções ESG</h3>
+                <p class="feature-description">
+                    Conecta empresas a fornecedores certificados de energia renovável, reciclagem, logística limpa e mais.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Fornecedores certificados</li>
+                    <li><i class="fas fa-check"></i> Energia renovável</li>
+                    <li><i class="fas fa-check"></i> Logística sustentável</li>
+                </ul>
+                <button class="btn btn-small btn-feature" data-feature="marketplace">Ver detalhes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section class="about-section" id="sobre-nos">
+        <div class="about-container">
+            <div class="about-visual">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Equipe colaborando em um projeto ESG">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left;">Sobre a ESG Platform</h2>
+                <p>A <strong>ESG Platform</strong> é uma solução B2B completa, projetada para desmistificar e democratizar a gestão de sustentabilidade. Acreditamos que empresas de todos os portes podem e devem ser agentes de transformação positiva.</p>
+                <p>Nossa missão é fornecer as ferramentas para que sua empresa não apenas cumpra suas obrigações, mas <strong>lidere pelo exemplo</strong>, construindo um futuro mais sustentável e lucrativo.</p>
+                <ul class="about-list">
+                    <li>
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <h4>Escalável e Flexível</h4>
+                            <p>Atendemos desde startups que estão começando sua jornada ESG até grandes corporações com operações complexas.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <h4>Implementação Ágil</h4>
+                            <p>Nossa metodologia de onboarding e integrações pré-construídas permitem que você comece a ver valor em tempo recorde.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Dashboard Interativo -->
+    <section class="dashboard-section">
+        <div class="section-header">
+            <h2 class="section-title">Dashboard ESG Interativo</h2>
+            <p class="section-subtitle">Visualize dados em tempo real da sua empresa</p>
+        </div>
+        
+        <div class="dashboard-container">
+            <div class="dashboard-controls">
+                <div class="control-group">
+                    <label for="companySelect">Empresa Simulada:</label>
+                    <select id="companySelect" class="form-select">
+                        <option value="manufacturing_general">Indústria (Geral)</option>
+                        <option value="manufacturing_automotive">Indústria Automotiva</option>
+                        <option value="manufacturing_textile">Indústria Têxtil</option>
+                        <option value="manufacturing_food">Indústria de Alimentos</option>
+                        <option value="manufacturing_pharma">Indústria Farmacêutica</option>
+                        <option value="retail">Varejo</option>
+                        <option value="technology">Tecnologia</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="timeframeSelect">Período:</label>
+                    <select id="timeframeSelect" class="form-select">
+                        <option value="monthly">Último Mês</option>
+                        <option value="quarterly">Último Trimestre</option>
+                        <option value="yearly">Último Ano</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" id="refreshData">
+                    <i class="fas fa-sync-alt"></i> Atualizar Dados
+                </button>
+            </div>
+            
+            <div class="dashboard-metrics">
+                <!-- Métricas serão preenchidas via JavaScript -->
+            </div>
+            
+            <div class="dashboard-charts">
+                <div class="chart-container">
+                    <canvas id="esgChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Demonstração -->
+    <section class="demo-section" id="demo-form-section">
+        <div class="demo-container">
+            <div class="demo-content">
+                <h2 class="demo-title">Experimente a Plataforma ESG</h2>
+                <p class="demo-text">Solicite uma demonstração personalizada para sua empresa e descubra como podemos ajudar a otimizar suas práticas ESG.</p>
+                
+                <div class="demo-form">
+                    <div class="form-group">
+                        <input type="text" id="nome" class="form-input" placeholder="Seu Nome">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-input" placeholder="Seu E-mail Corporativo">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="empresa" class="form-input" placeholder="Nome da Empresa">
+                    </div>
+                    <div class="form-group">
+                        <select id="funcionarios" class="form-input">
+                            <option value="">Número de Funcionários</option>
+                            <option value="1-10">1-10</option>
+                            <option value="11-50">11-50</option>
+                            <option value="51-200">51-200</option>
+                            <option value="201-1000">201-1000</option>
+                            <option value="1000+">1000+</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-large" id="solicitarDemo">Solicitar Demonstração</button>
+                    <p class="form-note">Entraremos em contato em até 24h úteis.</p>
+                </div>
+            </div>
+            
+            <div class="demo-visual">
+                <div class="demo-card">
+                    <div class="demo-card-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Implementação Rápida</h3>
+                    </div>
+                    <p>Conecte seus sistemas em poucos dias e comece a gerar insights ESG valiosos.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-card-header">
+                        <i class="fas fa-lock"></i>
+                        <h3>Segurança de Dados</h3>
+                    </div>
+                    <p>Seus dados são protegidos com criptografia de ponta a ponta e conformidade com LGPD.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-card-header">
+                        <i class="fas fa-headset"></i>
+                        <h3>Suporte Dedicado</h3>
+                    </div>
+                    <p>Equipe especializada para ajudar na implementação e no uso da plataforma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span class="logo-text">ESG<span class="logo-highlight">Platform</span></span>
+                </div>
+                <p class="footer-text">Plataforma digital B2B que utiliza IA e dados em tempo real para ajudar empresas a gerenciar, otimizar e provar suas práticas de ESG.</p>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Funcionalidades</h4>
+                <ul class="footer-links">
+                    <li><a href="#dashboard">Dashboard Autônomo</a></li>
+                    <li><a href="#digital-twin">ESG Digital Twin</a></li>
+                    <li><a href="#compliance">IA para Compliance</a></li>
+                    <li><a href="#certificacao">Certificação Automatizada</a></li>
+                    <li><a href="#marketplace">Marketplace ESG</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Documentação</a></li>
+                    <li><a href="#">API para Desenvolvedores</a></li>
+                    <li><a href="#">Blog ESG</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Central de Ajuda</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Contato</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                    <li><i class="fas fa-phone"></i> +55 (11) 99999-9999</li>
+                    <li><i class="fas fa-envelope"></i> contato@esgplatform.com</li>
+                </ul>
+                
+                <div class="footer-newsletter">
+                    <p>Assine nossa newsletter</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" class="newsletter-input">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 ESG Platform. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalhes das funcionalidades -->
+    <div class="modal" id="featureModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalhes da Funcionalidade</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- Conteúdo será preenchido via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
