@@ -297,17 +297,27 @@ Para contribuir com o projeto:
 
 1. Faça um **Fork** do repositório
 2. Crie uma branch para sua funcionalidade:
-   ```bash
-   git checkout -b feature/nova-funcionalidade
+
+```bash
+git checkout -b feature/nova-funcionalidade
+
+```
 
 Faça o commit das alterações:
 
+```bash
 git commit -m "Adiciona nova funcionalidade"
+
+```
 
 Envie a branch para o seu repositório:
 
+```bash
 git push origin feature/nova-funcionalidade
-Abra um Pull Request descrevendo as alterações realizadas.
+
+```
+
+Abra um **Pull Request** descrevendo as alterações realizadas.
 
 Sugestões relacionadas a ESG, Data Visualization, Analytics, Inteligência Artificial e experiência de usuário são especialmente bem-vindas.
 
