@@ -14,3 +14,11 @@ A solução combina uma landing page responsiva com um dashboard interativo, per
 O projeto também explora uma arquitetura web integrada, utilizando JavaScript e Chart.js no Front-end e um backend desenvolvido com Node.js e Express para processamento das solicitações enviadas pelo formulário.
 
 ---
+
+## 🌐 Aplicação Online
+
+🚀 Acesse o Eco Connect AI
+
+eco-connect-ai-esg-plataform.vercel.app
+
+**Nota : Os indicadores apresentados no dashboard utilizam dados simulados para fins de demonstração do projeto**
