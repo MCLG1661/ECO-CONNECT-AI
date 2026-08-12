@@ -17,8 +17,10 @@ O projeto também explora uma arquitetura web integrada, utilizando JavaScript e
 
 ## 🌐 Aplicação Online
 
-🚀 Acesse o Eco Connect AI
+Acesse o Eco Connect AI
 
-eco-connect-ai-esg-plataform.vercel.app
+[eco-connect-ai-esg-plataform.vercel.app](https://eco-connect-ai-esg-plataform.vercel.app/)
 
 **Nota : Os indicadores apresentados no dashboard utilizam dados simulados para fins de demonstração do projeto**
+
+---
