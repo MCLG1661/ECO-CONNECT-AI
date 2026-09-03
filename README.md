@@ -1,256 +1,374 @@
-# 🌱 ECO CONNECT AI
+# 🌱 ECO CONNECT AI — ESG Data & Sustainability Platform
 
-*Protótipo de plataforma B2B desenvolvido para apoiar empresas na organização, visualização e acompanhamento de indicadores relacionados a ESG — Environmental, Social and Governance*
+> Protótipo B2B para visualização, acompanhamento e exploração de indicadores ESG, conectando sustentabilidade, dados, tecnologia e Product Thinking.
 
 ![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![Chart.js](https://img.shields.io/badge/Chart.js-Data%20Visualization-FF6384?logo=chartdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-API-000000?logo=express&logoColor=white)
-![ESG](https://img.shields.io/badge/ESG-Sustainability-2E8B57)
-
-A solução combina uma landing page responsiva com um dashboard interativo, permitindo visualizar métricas, explorar indicadores por empresa e período e apresentar informações relacionadas à gestão sustentável de forma estruturada.
-O projeto também explora uma arquitetura web integrada, utilizando JavaScript e Chart.js no Front-end e um backend desenvolvido com Node.js e Express para processamento das solicitações enviadas pelo formulário.
+![Node.js](https://img.shields.io/badge/Node.js-Backend%20Prototype-339933?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-API%20Prototype-000000?logo=express&logoColor=white)
+![ESG](https://img.shields.io/badge/ESG-Sustainability-00A86B)
+![Status](https://img.shields.io/badge/Status-Prototype-orange)
 
 ---
 
-## 🌐 Aplicação Online
+## 📌 Sobre o Projeto
 
-Acesse o Eco Connect AI
+O **Eco Connect AI** é um protótipo de produto digital B2B criado para explorar como **dados, visualização e tecnologia** podem apoiar empresas no acompanhamento de indicadores relacionados a:
 
-[eco-connect-ai-esg-plataform.vercel.app](https://eco-connect-ai-esg-plataform.vercel.app/)
+- Environmental;
+- Social;
+- Governance.
 
-**Nota : Os indicadores apresentados no dashboard utilizam dados simulados para fins de demonstração do projeto**
+A aplicação organiza dados ESG simulados em uma experiência interativa, permitindo explorar indicadores por empresa e período através de cards e visualizações gráficas.
 
----
-
-## 💼 Problema de Negócio
-
-A crescente relevância dos critérios ESG aumenta a necessidade de organizações estruturarem informações relacionadas ao seu desempenho ambiental, social e de governança.
-Quando esses dados estão dispersos ou são apresentados sem uma camada adequada de visualização, torna-se mais difícil acompanhar indicadores, comparar resultados e comunicar iniciativas de sustentabilidade.
-O Eco Connect AI foi concebido como um protótipo para explorar como uma plataforma digital pode centralizar essas informações e facilitar sua interpretação.
+Além das funcionalidades implementadas, o projeto apresenta uma **visão de evolução do produto** envolvendo Analytics, automação, Inteligência Artificial, Digital Twin, Compliance ESG e criação de um possível ecossistema B2B.
 
 ---
 
-## 🎯 Objetivo
+## ⚠️ Escopo da Versão Atual
 
-Desenvolver uma experiência web B2B capaz de apresentar indicadores ESG por meio de uma interface moderna, responsiva e interativa.
-A solução busca demonstrar conceitos relacionados a :
+O Eco Connect AI é um **projeto educacional, demonstrativo e de portfólio**.
 
-- Gestão e visualização de indicadores ESG
-- Data Visualization
-- Dashboards interativos
-- Experiência digital B2B
-- Desenvolvimento Front-end
-- Integração Front-end e Back-end
-- Aplicações web responsivas
+A versão atual utiliza **dados simulados** e não representa uma plataforma ESG comercial em produção.
+
+### Implementado
+
+- Dashboard ESG;
+- indicadores demonstrativos;
+- dataset estruturado em JSON;
+- filtro por empresa;
+- filtro por período;
+- atualização dinâmica dos indicadores;
+- visualização gráfica com Chart.js;
+- interface responsiva;
+- modais informativos;
+- fluxo demonstrativo de solicitação de contato;
+- backend experimental em Node.js/Express para ambiente compatível.
+
+### Roadmap
+
+Os seguintes recursos representam **visão de produto e não estão implementados nesta versão**:
+
+- Inteligência Artificial;
+- Digital Twin;
+- monitoramento regulatório;
+- Compliance ESG automatizado;
+- geração automatizada de certificações;
+- blockchain;
+- Marketplace ESG;
+- integrações corporativas;
+- autenticação;
+- área do cliente;
+- processamento de dados ESG em tempo real.
 
 ---
 
-## ✨ Funcionalidades
+# 🎯 Problema
 
-📊 Dashboard ESG
+Organizações podem acompanhar diferentes indicadores relacionados a sustentabilidade, impacto ambiental, diversidade, governança e conformidade.
 
-O dashboard apresenta indicadores utilizando dados estruturados em JSON e visualizações desenvolvidas com Chart.js.
-Entre os recursos disponíveis estão :
+Quando esses dados estão distribuídos entre diferentes sistemas, planilhas e departamentos, a tomada de decisão pode se tornar mais complexa.
 
-- Visualização dinâmica de métricas
-- Gráficos interativos
-- Filtro por empresa
-- Filtro por período
-- Atualização das informações exibidas
-
-🌱 Apresentação da Solução
-
-A landing page apresenta a proposta de valor do Eco Connect AI e organiza as principais funcionalidades da plataforma em uma experiência voltada ao contexto B2B.
-
-🧩 Modais Interativos
-
-Os cards de funcionalidades permitem acessar informações adicionais por meio de modais, proporcionando uma experiência mais dinâmica sem necessidade de abandonar a página principal.
-
-📱 Design Responsivo
-
-A interface foi desenvolvida para adaptação a diferentes tamanhos de tela :
+Uma possível jornada é:
 
 ```text
-Desktop
-   ↓
-Tablet
-   ↓
-Smartphone
-
+Dados Operacionais
+       ↓
+Indicadores ESG
+       ↓
+Consolidação
+       ↓
+Visualização
+       ↓
+Análise
+       ↓
+Insight
+       ↓
+Decisão
+       ↓
+Ação
 ```
 
-📬 Solicitação de Demonstração
+O Eco Connect AI explora uma questão de produto:
 
-O projeto possui formulário para solicitação de demonstração da plataforma.
-No ambiente local, os dados enviados pelo formulário podem ser recebidos por um servidor desenvolvido em **Node.js + Express**.
+> **Como transformar diferentes indicadores ESG em uma experiência digital simples, visual e orientada à tomada de decisão?**
 
 ---
 
-## 🔄 Fluxo da Aplicação
+# 💡 Proposta de Solução
+
+A proposta do Eco Connect AI é funcionar como uma camada digital para organização e visualização de indicadores ESG.
 
 ```text
-Usuário
+Empresa
    ↓
-Landing Page
+Dados ESG
    ↓
-Exploração da Solução
+Estruturação
    ↓
-Dashboard ESG
+Dashboard
    ↓
-Seleção de Empresa / Período
+Indicadores
    ↓
-Leitura dos Dados JSON
+Data Visualization
    ↓
-Processamento com JavaScript
+Análise
    ↓
-Visualização com Chart.js
-   ↓
-Análise dos Indicadores
-
+Decisão
 ```
+
+Na versão atual, esse fluxo é demonstrado através de um dataset simulado armazenado em JSON.
 
 ---
 
-## 🏗️ Arquitetura
+# 📊 Dashboard ESG
+
+O principal componente funcional do projeto é o **Dashboard ESG Interativo**.
+
+O usuário pode selecionar:
 
 ```text
-                  ┌───────────────────┐
-                  │      Usuário      │
-                  └─────────┬─────────┘
-                            ↓
-                  ┌───────────────────┐
-                  │     Front-end     │
-                  │ HTML / CSS / JS   │
-                  └─────────┬─────────┘
-                            │
-              ┌─────────────┴─────────────┐
-              ↓                           ↓
-      ┌───────────────┐           ┌───────────────┐
-      │   data.json   │           │   Formulário  │
-      └───────┬───────┘           └───────┬───────┘
-              ↓                           ↓
-      ┌───────────────┐           ┌───────────────┐
-      │   Chart.js    │           │ Node / Express│
-      └───────┬───────┘           └───────────────┘
-              ↓
-      ┌───────────────┐
-      │ Dashboard ESG │
-      └───────────────┘
-
+Empresa
+   +
+Período
 ```
 
----
+A aplicação atualiza dinamicamente os indicadores apresentados.
 
-📊 Data Visualization
+Entre os exemplos demonstrativos estão:
 
-A camada de visualização utiliza **Chart.js** para transformar os dados armazenados em data.json em gráficos dinâmicos.
-O dashboard permite explorar os indicadores por diferentes dimensões, proporcionando uma representação visual mais adequada para análise e acompanhamento dos resultados.
-
----
-
-## 🛠️ Tecnologias
-
-**HTML5** -	Estrutura da aplicação
-
-**CSS3** -	Interface e responsividade
-
-**JavaScript ES6+** - Lógica e interatividade
-
-**Chart.js** -	Visualização gráfica dos indicadores
-
-**JSON** -	Estruturação dos dados simulados
-
-**Node.js** -	Ambiente de execução do backend
-
-**Express.js** -	Recebimento e processamento do formulário
-
-**Font Awesome** - Elementos visuais e ícones
-
-**Vercel** -	Deploy da interface web
+- pegada de CO₂;
+- energia renovável;
+- diversidade;
+- conformidade;
+- score ESG.
 
 ---
 
-## 📂 Estrutura do Projeto
+# 🏭 Segmentação por Empresa
+
+O protótipo possui diferentes empresas/categorias simuladas para demonstrar a capacidade de segmentação dos dados.
+
+Entre os recortes disponíveis estão:
 
 ```text
-ECO-CONNECT-AI-ESG-PLATAFORM/
-│
-├── index.html
-├── style.css
-├── script.js
-├── server.js
-├── data.json
-└── README.md
+Indústria Geral
+Indústria Automotiva
+Indústria Têxtil
+Indústria de Alimentos
+Indústria Farmacêutica
+Varejo
+Tecnologia
+```
 
+A alteração da empresa modifica os indicadores apresentados pelo dashboard conforme os dados disponíveis no dataset demonstrativo.
+
+---
+
+# 📅 Análise por Período
+
+Também é possível alterar o período analisado.
+
+```text
+Último Mês
+     ↓
+Último Trimestre
+     ↓
+Último Ano
+```
+
+Isso permite demonstrar uma experiência típica de dashboards corporativos, nos quais diferentes dimensões podem ser utilizadas para explorar os dados.
+
+---
+
+# 📈 Data Visualization
+
+O projeto utiliza **Chart.js** para apresentar visualmente a evolução dos indicadores.
+
+Fluxo simplificado:
+
+```text
+data.json
+    ↓
+JavaScript
+    ↓
+Filtro
+    ↓
+Processamento
+    ↓
+Chart.js
+    ↓
+Visualização
+```
+
+A aplicação destrói e recria a instância do gráfico quando necessário, permitindo atualizar a visualização conforme os filtros selecionados.
+
+---
+
+# 🗃️ Estrutura de Dados
+
+Os dados demonstrativos são armazenados em:
+
+```text
+data.json
+```
+
+A estrutura permite organizar informações por:
+
+```text
+Empresa
+   ↓
+Período
+   ↓
+Métricas
+   +
+Série Temporal
+```
+
+Isso separa os dados da camada de apresentação e permite que o Front-end atualize a interface dinamicamente.
+
+---
+
+# 🧠 Product Thinking
+
+O Eco Connect AI não foi estruturado apenas como um exercício de Front-end.
+
+O projeto procura representar uma ideia de produto B2B:
+
+```text
+Problema
+   ↓
+Usuário Corporativo
+   ↓
+Dados
+   ↓
+Indicadores
+   ↓
+Experiência
+   ↓
+Visualização
+   ↓
+Insight
+   ↓
+Decisão
+```
+
+Essa abordagem permite explorar conceitos relacionados a:
+
+- Product Thinking;
+- Data Products;
+- ESG;
+- Business Intelligence;
+- Data Visualization;
+- experiência do usuário;
+- dashboards corporativos;
+- evolução de produto;
+- roadmap tecnológico.
+
+---
+
+# 🌱 ESG
+
+ESG representa três dimensões:
+
+## 🌎 Environmental
+
+Indicadores relacionados ao impacto ambiental das organizações.
+
+Exemplos:
+
+- emissões;
+- energia;
+- recursos naturais;
+- resíduos;
+- sustentabilidade operacional.
+
+## 👥 Social
+
+Indicadores relacionados ao impacto das organizações sobre pessoas e sociedade.
+
+Exemplos:
+
+- diversidade;
+- inclusão;
+- segurança;
+- desenvolvimento humano;
+- responsabilidade social.
+
+## 🏛️ Governance
+
+Indicadores relacionados a governança e práticas corporativas.
+
+Exemplos:
+
+- compliance;
+- transparência;
+- gestão de riscos;
+- controles;
+- políticas corporativas.
+
+O Eco Connect AI utiliza esse contexto como domínio de negócio para o protótipo.
+
+---
+
+# 🧩 Produto Atual e Visão de Evolução
+
+A interface diferencia explicitamente as funcionalidades atuais das funcionalidades previstas para futuras versões.
+
+## ✅ Dashboard ESG — Implementado
+
+Inclui:
+
+- indicadores simulados;
+- filtros;
+- visualização gráfica;
+- atualização dinâmica;
+- dataset JSON.
+
+## 🛣️ ESG Digital Twin — Roadmap
+
+Uma futura arquitetura poderia permitir simulações de cenários relacionados a:
+
+- emissões;
+- energia;
+- operações;
+- recursos;
+- impactos ambientais.
+
+Fluxo conceitual:
+
+```text
+Dados Operacionais
+       ↓
+Modelo Digital
+       ↓
+Simulação
+       ↓
+Cenários
+       ↓
+Impacto ESG
+       ↓
+Decisão
 ```
 
 ---
 
-## 🚀 Executando Localmente
+# 🤖 Inteligência Artificial — Roadmap
 
-Pré-requisitos
+Apesar do nome **Eco Connect AI**, a versão atual **não utiliza modelos de Inteligência Artificial**.
 
-**Node.js**
+A IA representa uma possível evolução futura do produto.
 
-**npm**
-
-**Git**
-
-1) Clone o repositório:
-
-git clone https://github.com/MCLG1661/ECO-CONNECT-AI-ESG-PLATAFORM.git
-
-2) Entre no diretório:
-
-cd ECO-CONNECT-AI-ESG-PLATAFORM
-
-3) Instale o Express:
-
-npm install express
-
-4) Execute o backend:
-
-node server.js
-
----
-
-## 💡 Competências Demonstradas
-
-O projeto explora conhecimentos relacionados a :
-
-- ESG
-- Data Visualization
-- Desenvolvimento Front-end
-- JavaScript
-- HTML5
-- CSS3
-- Chart.js
-- Manipulação de JSON
-- Desenvolvimento responsivo
-- Node.js
-- Express.js
-- Integração Front-end / Back-end
-- UX para aplicações B2B
-- Deploy de aplicações web
-- Git e GitHub
-
----
-
-## Evolução para Inteligência Artificial
-
-O nome Eco Connect AI representa também a visão de evolução da plataforma.
-A versão atual concentra-se na experiência web, estruturação dos indicadores e visualização dos dados. Uma próxima geração da solução poderá incorporar recursos de Inteligência Artificial.
-
-
-Possíveis evoluções :
+Uma arquitetura futura poderia combinar:
 
 ```text
 Dados ESG
    ↓
-Tratamento e Estruturação
+Data Pipeline
+   ↓
+Banco de Dados
    ↓
 Analytics
    ↓
@@ -258,81 +376,506 @@ Machine Learning / IA
    ↓
 Detecção de Padrões
    ↓
-Insights Automatizados
+Alertas
    ↓
 Recomendações
    ↓
-Apoio à Tomada de Decisão
-
+Dashboard
 ```
-Entre as possibilidades estão :
 
-- Geração automática de insights sobre indicadores ESG
-- Identificação de tendências e anomalias
-- Comparação inteligente de desempenho
-- Recomendações baseadas nos indicadores
-- Uso de IA Generativa para interpretação dos resultados
-- Assistente conversacional para consulta dos indicadores
-- Integração com bases ESG reais
-- APIs para ingestão automatizada de dados
-- Persistência em banco de dados
-- Autenticação e ambientes individualizados por empresa
+Possíveis aplicações:
+
+- detecção de anomalias;
+- análise de tendências;
+- previsão de indicadores;
+- classificação de riscos;
+- geração de insights;
+- processamento de documentos;
+- análise de requisitos;
+- recomendações;
+- geração de relatórios.
 
 ---
 
-## ⚠️ Escopo do Projeto
+# ⚖️ Compliance ESG — Roadmap
 
-O Eco Connect AI é um protótipo demonstrativo.
-Os dados utilizados no dashboard são simulados e não representam indicadores reais de empresas.
-A versão atual demonstra principalmente conceitos de desenvolvimento web, visualização de dados, experiência B2B e integração Front-end/Back-end.
-Os recursos de Inteligência Artificial apresentados no roadmap representam evoluções futuras da solução e não funcionalidades implementadas na versão atual.
+Outra possibilidade de evolução seria a utilização de tecnologia para apoiar processos relacionados a Compliance ESG.
+
+Arquitetura conceitual:
+
+```text
+Fontes Externas
+      ↓
+Coleta
+      ↓
+Processamento
+      ↓
+Regras
+      ↓
+IA / NLP
+      ↓
+Classificação
+      ↓
+Alertas
+      ↓
+Dashboard
+```
+
+A versão atual **não monitora legislação, bases regulatórias ou fontes governamentais**.
 
 ---
 
-## ## 🤝 Como Contribuir
+# 📑 Relatórios ESG — Roadmap
 
-Contribuições, sugestões e melhorias são bem-vindas.
+Uma futura versão poderia transformar os dados consolidados em relatórios estruturados.
 
-Para contribuir com o projeto:
-
-1. Faça um **Fork** do repositório
-2. Crie uma branch para sua funcionalidade:
-
-```bash
-git checkout -b feature/nova-funcionalidade
-
+```text
+Indicadores
+     ↓
+Análise
+     ↓
+Template
+     ↓
+Relatório
+     ↓
+Revisão
+     ↓
+Publicação
 ```
 
-Faça o commit das alterações:
+Poderiam ser explorados frameworks e padrões aplicáveis conforme o contexto do produto.
 
-```bash
-git commit -m "Adiciona nova funcionalidade"
-
-```
-
-Envie a branch para o seu repositório:
-
-```bash
-git push origin feature/nova-funcionalidade
-
-```
-
-Abra um **Pull Request** descrevendo as alterações realizadas.
-
-Sugestões relacionadas a ESG, Data Visualization, Analytics, Inteligência Artificial e experiência de usuário são especialmente bem-vindas.
+Nenhuma certificação oficial é emitida pela versão atual.
 
 ---
 
-## 👨‍💻 Autor
+# 🛒 Marketplace ESG — Roadmap
 
-Marcus Guedes
+O projeto também explora conceitualmente a possibilidade de criação de um ecossistema B2B.
+
+```text
+Empresas
+   ↕
+Eco Connect AI
+   ↕
+Fornecedores
+   ↕
+Soluções ESG
+```
+
+Esse modelo poderia conectar organizações a:
+
+- consultorias;
+- tecnologia;
+- energia;
+- sustentabilidade;
+- gestão ambiental;
+- soluções corporativas.
+
+O Marketplace não está implementado na versão atual.
+
+---
+
+# 🖥️ Arquitetura Atual
+
+```text
+┌──────────────────────────┐
+│         Usuário          │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│        index.html        │
+│        Interface         │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│        script.js         │
+│ Interação + Regras + DOM │
+└─────────┬────────┬───────┘
+          │        │
+          ▼        ▼
+┌──────────────┐  ┌──────────────┐
+│  data.json   │  │   Chart.js   │
+│ Dados ESG    │  │ Visualização │
+└──────────────┘  └──────────────┘
+
+          +
+
+┌──────────────────────────┐
+│        server.js         │
+│     Node.js / Express    │
+│   Backend Experimental   │
+└──────────────────────────┘
+```
+
+---
+
+# 🔮 Arquitetura Futura
+
+Uma possível evolução para uma plataforma corporativa poderia assumir a seguinte estrutura:
+
+```text
+                 Usuários
+                    │
+                    ▼
+              ┌───────────┐
+              │ Front-end │
+              └─────┬─────┘
+                    │
+                    ▼
+              ┌───────────┐
+              │    API    │
+              └─────┬─────┘
+                    │
+        ┌───────────┼───────────┐
+        │           │           │
+        ▼           ▼           ▼
+   ┌─────────┐ ┌─────────┐ ┌─────────┐
+   │Database │ │Analytics│ │ AI / ML │
+   └────┬────┘ └────┬────┘ └────┬────┘
+        │           │           │
+        └───────────┼───────────┘
+                    │
+                    ▼
+             ┌────────────┐
+             │ ESG Engine │
+             └─────┬──────┘
+                   │
+                   ▼
+          ┌─────────────────┐
+          │ Insights/Alerts │
+          └─────────────────┘
+```
+
+---
+
+# 📨 Fluxo Demonstrativo B2B
+
+O projeto inclui um formulário para demonstrar uma possível jornada de geração de leads.
+
+```text
+Visitante
+    ↓
+Nome
+    ↓
+E-mail
+    ↓
+Empresa
+    ↓
+Porte
+    ↓
+Solicitação
+```
+
+Existe um backend experimental em Node.js/Express com endpoint para receber uma solicitação de demonstração em ambientes compatíveis.
+
+No deploy estático atual, caso o backend não esteja disponível, a aplicação informa explicitamente que:
+
+```text
+Nenhum dado foi enviado
+```
+
+em vez de apresentar uma confirmação falsa de processamento.
+
+---
+
+# 🔐 Tratamento de Dados
+
+O formulário possui finalidade demonstrativa.
+
+No ambiente público atual, quando o backend não está disponível:
+
+- nenhum cadastro é realizado;
+- nenhum lead é armazenado;
+- nenhuma mensagem é enviada;
+- nenhuma transação ocorre.
+
+O projeto não deve ser interpretado como um sistema de produção para processamento de dados pessoais.
+
+---
+
+# 🛠️ Tecnologias
+
+| Tecnologia | Aplicação |
+|---|---|
+| **HTML5** | Estrutura da interface |
+| **CSS3** | Layout e experiência visual |
+| **JavaScript** | Interatividade e lógica do Front-end |
+| **JSON** | Dataset demonstrativo |
+| **Chart.js** | Data Visualization |
+| **Node.js** | Backend experimental |
+| **Express** | Endpoint demonstrativo |
+| **Git** | Controle de versão |
+| **GitHub** | Versionamento e documentação |
+| **Vercel** | Deploy do Front-end |
+
+---
+
+# 📂 Estrutura do Projeto
+
+```text
+ECO-CONNECT-AI/
+│
+├── index.html
+├── style.css
+├── script.js
+├── data.json
+├── server.js
+└── README.md
+```
+
+---
+
+# ▶️ Executando o Front-end
+
+## 1. Clone o repositório
+
+```bash
+git clone https://github.com/MCLG1661/ECO-CONNECT-AI.git
+```
+
+## 2. Entre no diretório
+
+```bash
+cd ECO-CONNECT-AI
+```
+
+## 3. Execute
+
+Como o dashboard carrega `data.json` através de `fetch()`, prefira executar o projeto através de um servidor local.
+
+Uma opção é utilizar a extensão **Live Server** no VS Code.
+
+---
+
+# 🖥️ Backend Experimental
+
+O repositório também contém:
+
+```text
+server.js
+```
+
+com uma implementação experimental em Node.js/Express para demonstrar como uma futura camada de backend poderia receber solicitações do formulário.
+
+Essa camada não deve ser interpretada como uma API de produção.
+
+---
+
+# 🌐 Aplicação Online
+
+O protótipo está publicado na Vercel:
+
+**Eco Connect AI — ESG Platform**
+
+https://eco-connect-ai-esg-plataform.vercel.app/
+
+---
+
+# 🧪 Testes Funcionais Realizados
+
+O protótipo foi validado manualmente nos principais fluxos:
+
+- carregamento da interface;
+- carregamento dos dados JSON;
+- seleção de empresa;
+- seleção de período;
+- atualização dos indicadores;
+- atualização do gráfico;
+- navegação;
+- modais;
+- formulário demonstrativo;
+- tratamento da indisponibilidade do backend no deploy.
+
+---
+
+# 💼 Competências Demonstradas
+
+## Data Visualization
+
+- organização de indicadores;
+- dashboards;
+- séries temporais;
+- filtros;
+- Chart.js;
+- comunicação visual de dados.
+
+## Front-end Development
+
+- HTML;
+- CSS;
+- JavaScript;
+- DOM;
+- eventos;
+- manipulação dinâmica da interface;
+- responsividade.
+
+## Dados
+
+- JSON;
+- dados estruturados;
+- seleção de recortes;
+- transformação de dados em visualização.
+
+## Backend
+
+- Node.js;
+- Express;
+- endpoint REST demonstrativo;
+- JSON;
+- integração Front-end/Backend conceitual.
+
+## Product Thinking
+
+- problema de negócio;
+- proposta de valor;
+- experiência do usuário;
+- funcionalidades;
+- roadmap;
+- arquitetura futura;
+- produto B2B.
+
+## ESG
+
+- indicadores ambientais;
+- indicadores sociais;
+- governança;
+- sustentabilidade;
+- contexto corporativo.
+
+## Engenharia de Software
+
+- Git;
+- GitHub;
+- separação de responsabilidades;
+- tratamento de erros;
+- documentação;
+- deploy.
+
+---
+
+# 📈 Visão de Negócio
+
+O Eco Connect AI procura demonstrar uma abordagem na qual tecnologia começa pelo problema de negócio.
+
+```text
+ESG
+ ↓
+Dados
+ ↓
+Contexto
+ ↓
+Visualização
+ ↓
+Análise
+ ↓
+Insight
+ ↓
+Decisão
+ ↓
+Resultado
+```
+
+A proposta é explorar como **dados deixam de ser apenas registros e passam a funcionar como suporte à tomada de decisão**.
+
+---
+
+# 🚀 Roadmap
+
+## Fase 1 — Protótipo
+
+- [x] Interface web
+- [x] Dataset ESG demonstrativo
+- [x] Dashboard
+- [x] Filtros
+- [x] Chart.js
+- [x] Modais
+- [x] Formulário demonstrativo
+- [x] Deploy
+
+## Fase 2 — Data Platform
+
+- [ ] Backend persistente
+- [ ] Banco de dados
+- [ ] API REST
+- [ ] Autenticação
+- [ ] Histórico
+- [ ] ETL / ELT
+- [ ] integrações externas
+
+## Fase 3 — Analytics
+
+- [ ] KPIs configuráveis
+- [ ] benchmarking
+- [ ] alertas
+- [ ] análise de tendências
+- [ ] previsão de indicadores
+- [ ] dashboards customizáveis
+
+## Fase 4 — Inteligência Artificial
+
+- [ ] Machine Learning
+- [ ] NLP
+- [ ] LLM
+- [ ] RAG
+- [ ] detecção de anomalias
+- [ ] classificação de risco
+- [ ] recomendações
+- [ ] geração de insights
+
+## Fase 5 — Ecossistema
+
+- [ ] Digital Twin
+- [ ] Compliance inteligente
+- [ ] relatórios avançados
+- [ ] Marketplace ESG
+- [ ] integrações corporativas
+
+---
+
+# ⚠️ Disclaimer
+
+Este projeto possui finalidade exclusivamente **educacional, demonstrativa e de portfólio**.
+
+Os dados apresentados são simulados.
+
+O Eco Connect AI:
+
+- não representa dados reais de empresas;
+- não fornece certificação ESG;
+- não realiza auditoria;
+- não substitui consultoria especializada;
+- não monitora legislação;
+- não garante conformidade regulatória;
+- não utiliza Inteligência Artificial na versão atual;
+- não implementa Digital Twin na versão atual;
+- não possui Marketplace funcional;
+- não deve ser utilizado para tomada de decisão empresarial real.
+
+As funcionalidades avançadas apresentadas como **Roadmap** representam possibilidades de evolução do produto.
+
+---
+
+# 👨‍💻 Autor
+
+**Marcus Guedes**
 
 Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
 
-GitHub: MCLG1661
+**GitHub:** [MCLG1661](https://github.com/MCLG1661)
 
-LinkedIn: Marcus Guedes
+**LinkedIn:** [Marcus Guedes](https://www.linkedin.com/in/marcusguedes/)
 
 ---
 
-⭐ Eco Connect AI — Tecnologia, dados e sustentabilidade aplicados à gestão ESG.
+# ⭐ Sobre este Projeto
+
+O Eco Connect AI representa a exploração de uma ideia desde o **problema de negócio até um protótipo funcional**, conectando:
+
+**ESG + Data Visualization + JavaScript + Product Thinking + visão de evolução para Analytics e Inteligência Artificial.**
+
+---
+
+🌱 **Transformando dados ESG em informação visual para apoiar decisões mais sustentáveis.**
