@@ -1,216 +1,1058 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Navegação Mobile ---
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    // ==========================================================
+    // ECO CONNECT AI
+    // Plataforma demonstrativa B2B para indicadores ESG
+    // ==========================================================
 
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }));
 
-    // --- Scroll Suave ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+    // ==========================================================
+    // NAVEGAÇÃO MOBILE
+    // ==========================================================
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    if (hamburger && navMenu) {
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
         });
-    });
 
-    // --- Botões CTA ---
-    document.getElementById('ctaBtn').addEventListener('click', () => {
-        document.getElementById('demo-form-section').scrollIntoView({ behavior: 'smooth' });
-    });
+        document.querySelectorAll(".nav-link").forEach((link) => {
 
-    document.getElementById('saibaMaisBtn').addEventListener('click', () => {
-        document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-    });
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
 
-    // --- Dashboard Logic ---
+        });
+    }
+
+
+    // ==========================================================
+    // SCROLL SUAVE
+    // ==========================================================
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach((anchor) => {
+
+            anchor.addEventListener("click", function (event) {
+
+                const targetId = this.getAttribute("href");
+
+                if (!targetId || targetId === "#") {
+                    return;
+                }
+
+                const target = document.querySelector(targetId);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+
+    // ==========================================================
+    // CTAs
+    // ==========================================================
+
+    const ctaBtn = document.getElementById("ctaBtn");
+    const saibaMaisBtn = document.getElementById("saibaMaisBtn");
+
+    if (ctaBtn) {
+
+        ctaBtn.addEventListener("click", () => {
+
+            const demoSection =
+                document.getElementById("demo-form-section");
+
+            if (demoSection) {
+
+                demoSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    }
+
+
+    if (saibaMaisBtn) {
+
+        saibaMaisBtn.addEventListener("click", () => {
+
+            const features =
+                document.getElementById("features");
+
+            if (features) {
+
+                features.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    }
+
+
+    // ==========================================================
+    // DASHBOARD ESG
+    // ==========================================================
+
     let dashboardData = {};
     let esgChart = null;
 
-    // Carregar dados
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            dashboardData = data;
-            updateDashboard();
+    const companySelect =
+        document.getElementById("companySelect");
+
+    const timeframeSelect =
+        document.getElementById("timeframeSelect");
+
+    const refreshBtn =
+        document.getElementById("refreshData");
+
+
+    // ----------------------------------------------------------
+    // CARREGAMENTO DOS DADOS
+    // ----------------------------------------------------------
+
+    fetch("data.json")
+
+        .then((response) => {
+
+            if (!response.ok) {
+                throw new Error(
+                    `Erro HTTP: ${response.status}`
+                );
+            }
+
+            return response.json();
+
         })
-        .catch(error => console.error('Erro ao carregar dados:', error));
 
-    // Elementos do Dashboard
-    const companySelect = document.getElementById('companySelect');
-    const timeframeSelect = document.getElementById('timeframeSelect');
-    const refreshBtn = document.getElementById('refreshData');
+        .then((data) => {
 
-    refreshBtn.addEventListener('click', () => {
-        refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Atualizando...';
-        setTimeout(() => {
+            dashboardData = data;
+
             updateDashboard();
-            refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Atualizar Dados';
-        }, 800);
-    });
 
-    companySelect.addEventListener('change', updateDashboard);
-    timeframeSelect.addEventListener('change', updateDashboard);
+        })
 
-    function updateDashboard() {
-        if (!dashboardData.companies) return;
+        .catch((error) => {
 
-        const company = companySelect.value;
-        const timeframe = timeframeSelect.value;
-        const data = dashboardData.companies[company][timeframe];
+            console.error(
+                "Erro ao carregar os dados ESG:",
+                error
+            );
 
-        // Atualizar Métricas
-        const metricsContainer = document.querySelector('.dashboard-metrics');
-        metricsContainer.innerHTML = '';
+            showDashboardError();
 
-        data.metrics.forEach(metric => {
-            const trendIcon = metric.trend === 'up' ? 'fa-arrow-up' : (metric.trend === 'down' ? 'fa-arrow-down' : 'fa-minus');
-            const trendClass = metric.trend === 'up' ? 'up' : (metric.trend === 'down' ? 'down' : 'steady');
-            
-            // Lógica simples para cor da tendência (verde se for bom)
-            let colorClass = 'steady';
-            if (metric.goodTrend === 'up' && metric.trend === 'up') colorClass = 'up';
-            else if (metric.goodTrend === 'down' && metric.trend === 'down') colorClass = 'up'; // Redução de algo ruim é bom (verde)
-            else if (metric.trend !== 'steady') colorClass = 'down'; // Tendência ruim (vermelho - usando classe down que definiremos no CSS se precisar, ou reusando classes existentes)
-            
-            // Ajuste visual rápido: up = verde, steady = amarelo. Vamos simplificar usando as classes do CSS existente
-            const visualClass = (metric.goodTrend === metric.trend) ? 'up' : 'steady';
-
-            const html = `
-                <div class="metric">
-                    <div class="metric-title">${metric.name}</div>
-                    <div class="metric-value">${metric.value}</div>
-                    <div class="metric-trend ${visualClass}"><i class="fas ${trendIcon}"></i> ${metric.change}</div>
-                </div>
-            `;
-            metricsContainer.innerHTML += html;
         });
 
-        // Atualizar Gráfico
-        updateChart(data.chart);
+
+    // ----------------------------------------------------------
+    // EVENTOS DOS FILTROS
+    // ----------------------------------------------------------
+
+    if (companySelect) {
+
+        companySelect.addEventListener(
+            "change",
+            updateDashboard
+        );
+
     }
 
-    function updateChart(chartData) {
-        const ctx = document.getElementById('esgChart').getContext('2d');
-        
-        if (esgChart) {
-            esgChart.destroy();
+
+    if (timeframeSelect) {
+
+        timeframeSelect.addEventListener(
+            "change",
+            updateDashboard
+        );
+
+    }
+
+
+    if (refreshBtn) {
+
+        refreshBtn.addEventListener("click", () => {
+
+            const originalContent =
+                refreshBtn.innerHTML;
+
+            refreshBtn.disabled = true;
+
+            refreshBtn.innerHTML =
+                '<i class="fas fa-spinner fa-spin"></i> Atualizando...';
+
+
+            setTimeout(() => {
+
+                updateDashboard();
+
+                refreshBtn.innerHTML =
+                    originalContent;
+
+                refreshBtn.disabled = false;
+
+            }, 600);
+
+        });
+
+    }
+
+
+    // ----------------------------------------------------------
+    // ATUALIZAÇÃO DO DASHBOARD
+    // ----------------------------------------------------------
+
+    function updateDashboard() {
+
+        if (
+            !dashboardData ||
+            !dashboardData.companies ||
+            !companySelect ||
+            !timeframeSelect
+        ) {
+            return;
         }
 
+
+        const company =
+            companySelect.value;
+
+        const timeframe =
+            timeframeSelect.value;
+
+
+        const companyData =
+            dashboardData.companies[company];
+
+
+        if (!companyData) {
+
+            showDashboardError(
+                "Empresa não encontrada nos dados demonstrativos."
+            );
+
+            return;
+
+        }
+
+
+        const data =
+            companyData[timeframe];
+
+
+        if (!data) {
+
+            showDashboardError(
+                "Não existem dados para o período selecionado."
+            );
+
+            return;
+
+        }
+
+
+        updateMetrics(data.metrics || []);
+
+        updateChart(data.chart);
+
+    }
+
+
+    // ----------------------------------------------------------
+    // MÉTRICAS
+    // ----------------------------------------------------------
+
+    function updateMetrics(metrics) {
+
+        const metricsContainer =
+            document.querySelector(
+                ".dashboard-metrics"
+            );
+
+
+        if (!metricsContainer) {
+            return;
+        }
+
+
+        metricsContainer.innerHTML = "";
+
+
+        if (!metrics.length) {
+
+            metricsContainer.innerHTML =
+                "<p>Nenhum indicador disponível para este recorte.</p>";
+
+            return;
+
+        }
+
+
+        metrics.forEach((metric) => {
+
+            const trendIcon =
+                metric.trend === "up"
+                    ? "fa-arrow-up"
+                    : metric.trend === "down"
+                        ? "fa-arrow-down"
+                        : "fa-minus";
+
+
+            const visualClass =
+                getTrendClass(metric);
+
+
+            const metricElement =
+                document.createElement("div");
+
+
+            metricElement.className =
+                "metric";
+
+
+            metricElement.innerHTML = `
+                <div class="metric-title">
+                    ${escapeHTML(metric.name)}
+                </div>
+
+                <div class="metric-value">
+                    ${escapeHTML(metric.value)}
+                </div>
+
+                <div class="metric-trend ${visualClass}">
+                    <i class="fas ${trendIcon}"></i>
+                    ${escapeHTML(metric.change)}
+                </div>
+            `;
+
+
+            metricsContainer.appendChild(
+                metricElement
+            );
+
+        });
+
+    }
+
+
+    // ----------------------------------------------------------
+    // CLASSIFICAÇÃO VISUAL DA TENDÊNCIA
+    // ----------------------------------------------------------
+
+    function getTrendClass(metric) {
+
+        if (
+            metric.trend === "steady" ||
+            !metric.trend
+        ) {
+            return "steady";
+        }
+
+
+        if (
+            metric.goodTrend === metric.trend
+        ) {
+            return "up";
+        }
+
+
+        return "down";
+
+    }
+
+
+    // ----------------------------------------------------------
+    // GRÁFICO
+    // ----------------------------------------------------------
+
+    function updateChart(chartData) {
+
+        const chartElement =
+            document.getElementById("esgChart");
+
+
+        if (
+            !chartElement ||
+            !chartData ||
+            typeof Chart === "undefined"
+        ) {
+            return;
+        }
+
+
+        const ctx =
+            chartElement.getContext("2d");
+
+
+        if (esgChart) {
+
+            esgChart.destroy();
+
+        }
+
+
         esgChart = new Chart(ctx, {
-            type: 'line',
+
+            type: "line",
+
             data: {
-                labels: chartData.labels,
-                datasets: [{
-                    label: 'Score ESG',
-                    data: chartData.values,
-                    borderColor: '#10b981',
-                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                    tension: 0.4,
-                    fill: true
-                }]
+
+                labels:
+                    chartData.labels || [],
+
+                datasets: [
+
+                    {
+                        label: "Score ESG",
+
+                        data:
+                            chartData.values || [],
+
+                        borderColor:
+                            "#10b981",
+
+                        backgroundColor:
+                            "rgba(16, 185, 129, 0.1)",
+
+                        tension: 0.4,
+
+                        fill: true
+                    }
+
+                ]
+
             },
+
             options: {
+
                 responsive: true,
+
                 maintainAspectRatio: false,
+
                 plugins: {
+
                     legend: {
-                        position: 'top',
+                        position: "top"
                     },
+
                     title: {
                         display: true,
-                        text: 'Evolução do Score ESG'
+                        text: "Evolução do Score ESG"
                     }
+
                 },
+
                 scales: {
+
                     y: {
                         beginAtZero: true,
                         max: 100
                     }
+
                 }
+
             }
+
         });
+
     }
 
-    // --- Modal Logic ---
-    const modal = document.getElementById('featureModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalContent = document.getElementById('modalContent');
+
+    // ----------------------------------------------------------
+    // ERRO DO DASHBOARD
+    // ----------------------------------------------------------
+
+    function showDashboardError(
+        message = "Não foi possível carregar os indicadores demonstrativos."
+    ) {
+
+        const metricsContainer =
+            document.querySelector(
+                ".dashboard-metrics"
+            );
+
+
+        if (metricsContainer) {
+
+            metricsContainer.innerHTML =
+                `<p>${escapeHTML(message)}</p>`;
+
+        }
+
+    }
+
+
+    // ==========================================================
+    // MODAIS — VISÃO DO PRODUTO / ROADMAP
+    // ==========================================================
+
+    const modal =
+        document.getElementById(
+            "featureModal"
+        );
+
+    const closeModal =
+        document.getElementById(
+            "closeModal"
+        );
+
+    const modalTitle =
+        document.getElementById(
+            "modalTitle"
+        );
+
+    const modalContent =
+        document.getElementById(
+            "modalContent"
+        );
+
 
     const featureDetails = {
+
         dashboard: {
-            title: "Dashboard ESG Autônomo",
-            content: "<p>Nosso dashboard centraliza todas as suas métricas ESG em um único lugar. Conecte-se via API a seus sistemas ERP, CRM e IoT para ingestão automática de dados.</p><p><strong>Benefícios:</strong></p><ul><li>Visão holística da sustentabilidade</li><li>Eliminação de planilhas manuais</li><li>Rastreabilidade de dados para auditoria</li></ul>"
+
+            title:
+                "Dashboard ESG — Protótipo Atual",
+
+            content: `
+                <p>
+                    O protótipo atual demonstra a centralização
+                    e visualização de indicadores ESG utilizando
+                    dados estruturados em JSON e gráficos
+                    interativos com Chart.js.
+                </p>
+
+                <p>
+                    <strong>Implementado nesta versão:</strong>
+                </p>
+
+                <ul>
+                    <li>Indicadores ESG demonstrativos</li>
+                    <li>Filtro por empresa</li>
+                    <li>Filtro por período</li>
+                    <li>Visualização gráfica</li>
+                    <li>Atualização dinâmica da interface</li>
+                </ul>
+            `
+
         },
+
+
         twin: {
-            title: "ESG Digital Twin",
-            content: "<p>Crie uma réplica digital de suas operações para simular cenários de impacto ambiental. Teste mudanças em processos produtivos antes de implementá-los fisicamente.</p><p><strong>Funcionalidades:</strong></p><ul><li>Simulação de pegada de carbono</li><li>Otimização de consumo energético</li><li>Análise de ciclo de vida do produto</li></ul>"
+
+            title:
+                "ESG Digital Twin — Roadmap",
+
+            content: `
+                <p>
+                    Conceito de evolução futura do Eco Connect AI.
+                </p>
+
+                <p>
+                    Uma arquitetura de Digital Twin poderia permitir
+                    a simulação de cenários operacionais e ambientais
+                    antes da implementação de mudanças no ambiente real.
+                </p>
+
+                <p>
+                    <strong>Possibilidades futuras:</strong>
+                </p>
+
+                <ul>
+                    <li>Simulação de pegada de carbono</li>
+                    <li>Análise de consumo energético</li>
+                    <li>Modelagem de cenários ESG</li>
+                    <li>Análise de ciclo de vida</li>
+                </ul>
+
+                <p>
+                    <small>
+                        Recurso conceitual não implementado
+                        na versão atual.
+                    </small>
+                </p>
+            `
+
         },
+
+
         compliance: {
-            title: "IA para Prevenção de Multas",
-            content: "<p>Nossa IA monitora continuamente diários oficiais e legislações ambientais em mais de 50 países, cruzando com seus dados operacionais para identificar riscos de não-conformidade.</p>"
+
+            title:
+                "IA para Compliance ESG — Roadmap",
+
+            content: `
+                <p>
+                    Visão de evolução para utilização de Inteligência
+                    Artificial no apoio à análise de riscos e requisitos
+                    relacionados a ESG e compliance.
+                </p>
+
+                <p>
+                    Uma futura implementação poderia integrar fontes
+                    externas, mecanismos de busca, regras de negócio
+                    e modelos de IA para auxiliar a interpretação
+                    das informações.
+                </p>
+
+                <p>
+                    <small>
+                        A versão atual não monitora legislação,
+                        diários oficiais ou bases regulatórias.
+                    </small>
+                </p>
+            `
+
         },
+
+
         certification: {
-            title: "Certificação ESG Automatizada",
-            content: "<p>Gere relatórios prontos para auditoria (GRI, SASB, TCFD) com um clique. Utilizamos Blockchain para garantir a imutabilidade e veracidade dos dados apresentados aos stakeholders.</p>"
+
+            title:
+                "Relatórios e Certificações — Roadmap",
+
+            content: `
+                <p>
+                    Conceito de evolução para geração estruturada
+                    de relatórios ESG e apoio aos processos
+                    de reporte corporativo.
+                </p>
+
+                <p>
+                    Uma futura versão poderia incorporar modelos
+                    e frameworks aplicáveis ao contexto ESG,
+                    além de mecanismos adicionais de rastreabilidade.
+                </p>
+
+                <p>
+                    <small>
+                        Certificação automatizada e blockchain
+                        não estão implementados nesta versão.
+                    </small>
+                </p>
+            `
+
         },
+
+
         marketplace: {
-            title: "Marketplace de Soluções ESG",
-            content: "<p>Acesse uma rede curada de fornecedores sustentáveis. De compra de créditos de carbono a fornecedores de embalagens biodegradáveis, encontre parceiros alinhados com seus valores.</p>"
+
+            title:
+                "Marketplace ESG — Roadmap",
+
+            content: `
+                <p>
+                    Conceito de marketplace B2B para conectar
+                    organizações a fornecedores, serviços e
+                    soluções relacionadas à sustentabilidade.
+                </p>
+
+                <p>
+                    A funcionalidade representa uma possibilidade
+                    futura de expansão do ecossistema Eco Connect AI.
+                </p>
+
+                <p>
+                    <small>
+                        Marketplace não implementado
+                        na versão atual.
+                    </small>
+                </p>
+            `
+
         }
+
     };
 
-    document.querySelectorAll('.btn-feature').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const feature = btn.getAttribute('data-feature');
-            if (featureDetails[feature]) {
-                modalTitle.innerText = featureDetails[feature].title;
-                modalContent.innerHTML = featureDetails[feature].content;
-                modal.classList.add('active');
-            }
+
+    document
+        .querySelectorAll(".btn-feature")
+        .forEach((button) => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const feature =
+                        button.getAttribute(
+                            "data-feature"
+                        );
+
+
+                    const details =
+                        featureDetails[feature];
+
+
+                    if (
+                        !details ||
+                        !modal ||
+                        !modalTitle ||
+                        !modalContent
+                    ) {
+                        return;
+                    }
+
+
+                    modalTitle.textContent =
+                        details.title;
+
+
+                    modalContent.innerHTML =
+                        details.content;
+
+
+                    modal.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
         });
-    });
 
-    closeModal.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
+    if (closeModal && modal) {
+
+        closeModal.addEventListener(
+            "click",
+            () => {
+
+                modal.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (modal) {
+
+        window.addEventListener(
+            "click",
+            (event) => {
+
+                if (event.target === modal) {
+
+                    modal.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // ==========================================================
+    // FORMULÁRIO DE DEMONSTRAÇÃO
+    // ==========================================================
+
+    const demoForm =
+        document.querySelector(
+            ".demo-form"
+        );
+
+    const submitBtn =
+        document.getElementById(
+            "solicitarDemo"
+        );
+
+
+    if (submitBtn && demoForm) {
+
+        submitBtn.addEventListener(
+            "click",
+            async (event) => {
+
+                event.preventDefault();
+
+
+                const nomeInput =
+                    document.getElementById(
+                        "nome"
+                    );
+
+                const emailInput =
+                    document.getElementById(
+                        "email"
+                    );
+
+                const empresaInput =
+                    document.getElementById(
+                        "empresa"
+                    );
+
+
+                const nome =
+                    nomeInput
+                        ? nomeInput.value.trim()
+                        : "";
+
+
+                const email =
+                    emailInput
+                        ? emailInput.value.trim()
+                        : "";
+
+
+                const empresa =
+                    empresaInput
+                        ? empresaInput.value.trim()
+                        : "";
+
+
+                if (!nome || !email) {
+
+                    alert(
+                        "Por favor, preencha os campos obrigatórios."
+                    );
+
+                    return;
+
+                }
+
+
+                if (!isValidEmail(email)) {
+
+                    alert(
+                        "Informe um endereço de e-mail válido."
+                    );
+
+                    return;
+
+                }
+
+
+                const originalContent =
+                    submitBtn.innerHTML;
+
+
+                submitBtn.disabled = true;
+
+                submitBtn.innerHTML =
+                    '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "/api/demo",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body: JSON.stringify({
+                                    nome,
+                                    email,
+                                    empresa
+                                })
+                            }
+                        );
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            `Erro HTTP ${response.status}`
+                        );
+
+                    }
+
+
+                    const result =
+                        await response.json();
+
+
+                    console.log(
+                        "Resposta do servidor:",
+                        result
+                    );
+
+
+                    showFormSuccess(
+                        submitBtn,
+                        originalContent
+                    );
+
+
+                    clearDemoForm();
+
+                } catch (error) {
+
+                    console.warn(
+                        "Backend não disponível neste ambiente:",
+                        error
+                    );
+
+
+                    // --------------------------------------------------
+                    // O deploy estático na Vercel pode não executar
+                    // server.js como um servidor Express persistente.
+                    //
+                    // Nesse cenário, mantemos o formulário como
+                    // demonstração de UX, mas deixamos isso explícito.
+                    // --------------------------------------------------
+
+                    submitBtn.innerHTML =
+                        '<i class="fas fa-check"></i> Demonstração Registrada';
+
+
+                    submitBtn.style.backgroundColor =
+                        "#059669";
+
+
+                    alert(
+                        "Solicitação registrada apenas como demonstração.\n\n" +
+                        "O backend Node.js/Express não está disponível " +
+                        "neste ambiente de deploy e nenhum dado foi enviado."
+                    );
+
+
+                    clearDemoForm();
+
+
+                    setTimeout(() => {
+
+                        submitBtn.innerHTML =
+                            originalContent;
+
+                        submitBtn.style.backgroundColor =
+                            "";
+
+                        submitBtn.disabled =
+                            false;
+
+                    }, 3000);
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // ----------------------------------------------------------
+    // SUCESSO DO FORMULÁRIO
+    // ----------------------------------------------------------
+
+    function showFormSuccess(
+        button,
+        originalContent
+    ) {
+
+        button.innerHTML =
+            '<i class="fas fa-check"></i> Enviado com Sucesso!';
+
+
+        button.style.backgroundColor =
+            "#059669";
+
+
+        setTimeout(() => {
+
+            button.innerHTML =
+                originalContent;
+
+            button.style.backgroundColor =
+                "";
+
+            button.disabled =
+                false;
+
+        }, 3000);
+
+    }
+
+
+    // ----------------------------------------------------------
+    // LIMPEZA DO FORMULÁRIO
+    // ----------------------------------------------------------
+
+    function clearDemoForm() {
+
+        document
+            .querySelectorAll(
+                ".demo-form .form-input"
+            )
+            .forEach((input) => {
+
+                input.value = "";
+
+            });
+
+    }
+
+
+    // ----------------------------------------------------------
+    // VALIDAÇÃO DE E-MAIL
+    // ----------------------------------------------------------
+
+    function isValidEmail(email) {
+
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+            email
+        );
+
+    }
+
+
+    // ----------------------------------------------------------
+    // ESCAPE BÁSICO DE HTML
+    // ----------------------------------------------------------
+
+    function escapeHTML(value) {
+
+        if (
+            value === null ||
+            value === undefined
+        ) {
+            return "";
         }
-    });
 
-    // --- Form Submission ---
-    const demoForm = document.querySelector('.demo-form');
-    const submitBtn = document.getElementById('solicitarDemo');
 
-    submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
+        return String(value)
 
-        if(nome && email) {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado com Sucesso!';
-            submitBtn.style.backgroundColor = '#059669';
-            setTimeout(() => {
-                submitBtn.innerText = 'Solicitar Demonstração';
-                submitBtn.style.backgroundColor = '';
-                document.querySelectorAll('.form-input').forEach(input => input.value = '');
-            }, 3000);
-            // Aqui você adicionaria a chamada fetch para o backend
-        } else {
-            alert('Por favor, preencha os campos obrigatórios.');
-        }
-    });
+            .replaceAll("&", "&amp;")
+
+            .replaceAll("<", "&lt;")
+
+            .replaceAll(">", "&gt;")
+
+            .replaceAll('"', "&quot;")
+
+            .replaceAll("'", "&#039;");
+
+    }
+
 });
