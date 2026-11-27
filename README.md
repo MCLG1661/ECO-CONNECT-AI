@@ -163,7 +163,7 @@ Varejo
 Tecnologia
 ```
 
-A alteração da empresa modifica os indicadores apresentados pelo dashboard conforme os dados disponíveis no dataset demonstrativo.
+Somente Indústria Geral e Tecnologia possuem dados no dataset atual. As outras cinco categorias (incluindo Varejo) permanecem visíveis, mas desabilitadas. A alteração da categoria disponível modifica os indicadores do dashboard.
 
 ---
 
