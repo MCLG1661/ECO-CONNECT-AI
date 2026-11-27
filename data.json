@@ -3,7 +3,7 @@
         "manufacturing_general": {
             "monthly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "1,240", "change": "-5%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "1,240", "change": "-5%", "trend": "down", "goodTrend": "down" },
                     { "name": "Energia Renovável", "value": "45%", "change": "+2%", "trend": "up", "goodTrend": "up" },
                     { "name": "Resíduos Reciclados", "value": "78%", "change": "+1.5%", "trend": "up", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "82/100", "change": "+0.5", "trend": "up", "goodTrend": "up" }
@@ -15,7 +15,7 @@
             },
             "quarterly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "3,800", "change": "-12%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "3,800", "change": "-12%", "trend": "down", "goodTrend": "down" },
                     { "name": "Energia Renovável", "value": "42%", "change": "+8%", "trend": "up", "goodTrend": "up" },
                     { "name": "Resíduos Reciclados", "value": "75%", "change": "+5%", "trend": "up", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "82/100", "change": "+4", "trend": "up", "goodTrend": "up" }
@@ -27,7 +27,7 @@
             },
             "yearly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "14,500", "change": "-20%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "14,500", "change": "-20%", "trend": "down", "goodTrend": "down" },
                     { "name": "Energia Renovável", "value": "40%", "change": "+15%", "trend": "up", "goodTrend": "up" },
                     { "name": "Resíduos Reciclados", "value": "70%", "change": "+10%", "trend": "up", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "82/100", "change": "+12", "trend": "up", "goodTrend": "up" }
@@ -41,7 +41,7 @@
         "technology": {
             "monthly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "120", "change": "-2%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "120", "change": "-2%", "trend": "down", "goodTrend": "down" },
                     { "name": "Diversidade", "value": "65%", "change": "+1%", "trend": "up", "goodTrend": "up" },
                     { "name": "Gov. de Dados", "value": "98%", "change": "0%", "trend": "steady", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "91/100", "change": "+0.2", "trend": "up", "goodTrend": "up" }
@@ -53,7 +53,7 @@
             },
             "quarterly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "350", "change": "-5%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "350", "change": "-5%", "trend": "down", "goodTrend": "down" },
                     { "name": "Diversidade", "value": "64%", "change": "+3%", "trend": "up", "goodTrend": "up" },
                     { "name": "Gov. de Dados", "value": "98%", "change": "+1%", "trend": "up", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "91/100", "change": "+2", "trend": "up", "goodTrend": "up" }
@@ -65,7 +65,7 @@
             },
             "yearly": {
                 "metrics": [
-                    { "name": "Pegada de CO₂ (t)", "value": "1,400", "change": "-10%", "trend": "up", "goodTrend": "down" },
+                    { "name": "Pegada de CO₂ (t)", "value": "1,400", "change": "-10%", "trend": "down", "goodTrend": "down" },
                     { "name": "Diversidade", "value": "60%", "change": "+10%", "trend": "up", "goodTrend": "up" },
                     { "name": "Gov. de Dados", "value": "95%", "change": "+5%", "trend": "up", "goodTrend": "up" },
                     { "name": "Score ESG", "value": "91/100", "change": "+8", "trend": "up", "goodTrend": "up" }
