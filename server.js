@@ -11,8 +11,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Rota para receber dados do formulário (Simulação)
 app.post('/api/demo', (req, res) => {
-    const { nome, email, empresa } = req.body;
-    console.log(`Nova solicitação de demo recebida: ${nome} (${email}) - ${empresa}`);
+    console.log('Solicitação demonstrativa recebida.');
     
     res.status(200).json({ message: 'Solicitação recebida com sucesso!' });
 });

@@ -486,6 +486,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function showDashboardError(
         message = "Não foi possível carregar os indicadores demonstrativos."
     ) {
+        if (esgChart) {
+            esgChart.destroy();
+            esgChart = null;
+        }
 
         const metricsContainer =
             document.querySelector(
@@ -924,21 +928,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     // --------------------------------------------------
 
                     submitBtn.innerHTML =
-                        '<i class="fas fa-check"></i> Demonstração Registrada';
+                        '<i class="fas fa-exclamation-triangle"></i> Envio não confirmado';
 
 
                     submitBtn.style.backgroundColor =
-                        "#059669";
+                        "#b45309";
 
 
                     alert(
-                        "Solicitação registrada apenas como demonstração.\n\n" +
-                        "O backend Node.js/Express não está disponível " +
-                        "neste ambiente de deploy e nenhum dado foi enviado."
+                        "Não foi possível confirmar o envio da solicitação demonstrativa.\n\n" +
+                        "Verifique a disponibilidade do backend."
                     );
 
-
-                    clearDemoForm();
 
 
                     setTimeout(() => {
